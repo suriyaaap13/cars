@@ -13,8 +13,11 @@ import {
 
 
 const store = configureStore({
-    form: formReducer,
-    cars: carsReducer
+    reducer: {
+        form: formReducer,
+        cars: carsReducer
+    }
+    
 });
 
 export { store, changeSearchTerm, addCar, removeCar, changeName, changeCost }

@@ -11,6 +11,7 @@ const carsSlice = createSlice({
             state.searchTerm = action.payload;
         },
         addCar(state, action){
+            console.log("Hi the data is getting added ", action.payload);
             state.cars.push({
                 id: nanoid(),
                 name: action.payload.name,
@@ -27,4 +28,4 @@ const carsSlice = createSlice({
 });
 
 export const { changeSearchTerm, addCar, removeCar } = carsSlice.actions;
-export const { carsReducer } = carsSlice.reducer;
+export const carsReducer = carsSlice.reducer;
